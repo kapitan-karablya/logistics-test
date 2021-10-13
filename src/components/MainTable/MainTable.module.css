@@ -1,0 +1,105 @@
+.wrapper {
+    margin: 40px 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.tableButtons {
+    margin-bottom: 20px;
+    align-self: flex-end;
+}
+
+.tableButton {
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+    border: 1px solid #A3A3A3;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.tableWrapper {
+    height: 100%;
+    overflow: hidden;
+    border:  1px solid #ddd;
+    border-radius: 5px;
+}
+
+.table {
+    width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #EDEDED;
+    font-size: 14px;
+}
+
+
+.table tbody td {
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.tableScroll {
+    overflow: auto;
+    height: 100%;
+    margin-top: 0;
+}
+
+.tableScroll {
+    cursor: auto;
+}
+
+.tableScroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.tableScroll::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
+
+
+.tableScroll::-webkit-scrollbar-track:hover {
+    cursor: pointer;
+}
+
+.tableScroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #A3A3A3;
+}
+
+.tableScroll::-webkit-scrollbar-corner {
+    background-color: lightgray;
+}
+
+.application {
+    cursor: pointer;
+}
+
+.application:nth-child(even) {
+    background: #F8F8F8;
+}
+
+.application:hover {
+    background-color: lightgray;
+}
+
+.application.active {
+    background-color: lightblue;
+    cursor: default;
+}
