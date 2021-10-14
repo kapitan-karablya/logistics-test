@@ -1,4 +1,11 @@
-.wrapper {
+.mainWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main {
     padding: 40px 100px;
     height: 100%;
     display: flex;
@@ -7,6 +14,12 @@
 }
 
 .tableButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tableEditButtons {
     margin-bottom: 20px;
     align-self: flex-end;
 }
@@ -19,6 +32,16 @@
     border-radius: 3px;
     background-color: white;
     cursor: pointer;
+}
+
+.tableButton:last-child {
+    margin-right: 0;
+}
+
+.testDataButton {
+    width: auto;
+    color: gray;
+    margin-left: 0;
 }
 
 .tableWrapper {
@@ -43,6 +66,7 @@
     padding: 10px 15px;
     background: #EDEDED;
     font-size: 14px;
+
 }
 
 
@@ -52,6 +76,8 @@
     padding: 10px 15px;
     font-size: 14px;
     vertical-align: top;
+    max-width: 300px;
+    overflow: hidden;
 }
 
 .tableScroll {

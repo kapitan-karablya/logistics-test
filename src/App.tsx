@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
-import MainTable from "./components/MainTable/MainTable";
+import Main from "./components/Main/Main";
 
 
-interface Application {
+export interface Application {
     id: number;
     date: Date;
     companyName: string;
     comment: string;
     carrierFullName: string;
     carrierPhoneNumber: string;
-    ATICode: number;
+    atiCode: number;
 }
 
 /*const data1: {
@@ -25,7 +25,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 2,
@@ -34,7 +34,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 3,
@@ -43,7 +43,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 4,
@@ -52,7 +52,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 5,
@@ -61,7 +61,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 6,
@@ -70,7 +70,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 7,
@@ -79,7 +79,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 8,
@@ -88,7 +88,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 9,
@@ -97,7 +97,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 10,
@@ -106,7 +106,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 11,
@@ -115,7 +115,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 12,
@@ -124,7 +124,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 13,
@@ -133,7 +133,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 14,
@@ -142,7 +142,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 15,
@@ -151,7 +151,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 16,
@@ -160,7 +160,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 17,
@@ -169,7 +169,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 18,
@@ -178,7 +178,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 19,
@@ -187,7 +187,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 20,
@@ -196,7 +196,7 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         },
         {
             id: 21,
@@ -205,11 +205,11 @@ interface Application {
             comment:  "коммент",
             carrierFullName: "фио",
             carrierPhoneNumber: "телефон",
-            ATICode: "ati",
+            atiCode: "ati",
         }
     ]
 };*/
-
+/*
 const data: {
     applications: Application[]
 } = {
@@ -220,8 +220,8 @@ const data: {
             companyName: "АвтоАс",
             comment: "",
             carrierFullName: "Нестеров Макар Маркович",
-            carrierPhoneNumber: "+78127897",
-            ATICode: 60638,
+            carrierPhoneNumber: "+7144026785",
+            atiCode: 60638,
         },
         {
             id: 2,
@@ -229,8 +229,8 @@ const data: {
             companyName: "Прайм-Авто",
             comment: "",
             carrierFullName: "Кузнецов Даниил Вячеславович",
-            carrierPhoneNumber: "+74373865",
-            ATICode: 70531,
+            carrierPhoneNumber: "+7156133137",
+            atiCode: 70531,
         },
         {
             id: 3,
@@ -238,8 +238,8 @@ const data: {
             companyName: "ГрузАвтоэлита",
             comment: "",
             carrierFullName: "Антонов Савелий Матвеевич",
-            carrierPhoneNumber: "+77737352",
-            ATICode: 88271,
+            carrierPhoneNumber: "+7222607102",
+            atiCode: 88271,
         },
         {
             id: 4,
@@ -247,8 +247,8 @@ const data: {
             companyName: "Автополис",
             comment: "",
             carrierFullName: "Золотова Виктория Мироновна",
-            carrierPhoneNumber: "+72568949",
-            ATICode: 34161,
+            carrierPhoneNumber: "+7257457484",
+            atiCode: 34161,
         },
         {
             id: 5,
@@ -256,8 +256,8 @@ const data: {
             companyName: "Автолидер",
             comment: "",
             carrierFullName: "Шульгин Владимир Ярославович",
-            carrierPhoneNumber: "+76153106",
-            ATICode: 35171,
+            carrierPhoneNumber: "+7282332520",
+            atiCode: 35171,
         },
         {
             id: 6,
@@ -265,8 +265,8 @@ const data: {
             companyName: "Кабриолет",
             comment: "",
             carrierFullName: "Парамонов Григорий Владиславович",
-            carrierPhoneNumber: "+73404895",
-            ATICode: 11040,
+            carrierPhoneNumber: "+7291022904",
+            atiCode: 11040,
         },
         {
             id: 7,
@@ -274,8 +274,8 @@ const data: {
             companyName: "Орлан",
             comment: "",
             carrierFullName: "Суслов Филипп Максимович",
-            carrierPhoneNumber: "+77375910",
-            ATICode: 47210,
+            carrierPhoneNumber: "+7305740259",
+            atiCode: 47210,
         },
         {
             id: 8,
@@ -283,8 +283,8 @@ const data: {
             companyName: "Стрела",
             comment: "",
             carrierFullName: "Орлова Милана Михайловна",
-            carrierPhoneNumber: "+79026651",
-            ATICode: 14737,
+            carrierPhoneNumber: "+7336965758",
+            atiCode: 14737,
         },
         {
             id: 9,
@@ -292,8 +292,8 @@ const data: {
             companyName: "Новые горизонты",
             comment: "",
             carrierFullName: "Филатова Анна Глебовна",
-            carrierPhoneNumber: "+78860510",
-            ATICode: 92471,
+            carrierPhoneNumber: "+7379028738",
+            atiCode: 92471,
         },
         {
             id: 10,
@@ -301,8 +301,8 @@ const data: {
             companyName: "Бэст",
             comment: "",
             carrierFullName: "Захаров Александр Эмильевич",
-            carrierPhoneNumber: "+74538388",
-            ATICode: 78493,
+            carrierPhoneNumber: "+7474765195",
+            atiCode: 78493,
         },
         {
             id: 11,
@@ -310,8 +310,8 @@ const data: {
             companyName: "Сириус",
             comment: "",
             carrierFullName: "Сергеев Алексей Арсентьевич",
-            carrierPhoneNumber: "+72565396",
-            ATICode: 28943,
+            carrierPhoneNumber: "+7547587223",
+            atiCode: 28943,
         },
         {
             id: 12,
@@ -319,8 +319,8 @@ const data: {
             companyName: "Фордевинд",
             comment: "",
             carrierFullName: "Фролова Александра Павловна",
-            carrierPhoneNumber: "+72145662",
-            ATICode: 10149,
+            carrierPhoneNumber: "+7550266648",
+            atiCode: 10149,
         },
         {
             id: 13,
@@ -328,8 +328,8 @@ const data: {
             companyName: "Макси",
             comment: "",
             carrierFullName: "Лебедев Алексей Савельевич",
-            carrierPhoneNumber: "+78783449",
-            ATICode: 11142,
+            carrierPhoneNumber: "+7610524443",
+            atiCode: 11142,
         },
         {
             id: 14,
@@ -337,8 +337,8 @@ const data: {
             companyName: "Зеленый свет",
             comment: "",
             carrierFullName: "Осипов Денис Тимофеевич",
-            carrierPhoneNumber: "+74092437",
-            ATICode: 48185,
+            carrierPhoneNumber: "+7650898658",
+            atiCode: 48185,
         },
         {
             id: 15,
@@ -346,8 +346,8 @@ const data: {
             companyName: "Юность",
             comment: "",
             carrierFullName: "Мартынов Игорь Павлович",
-            carrierPhoneNumber: "+72235269",
-            ATICode: 94704,
+            carrierPhoneNumber: "+7681226412",
+            atiCode: 94704,
         },
         {
             id: 16,
@@ -355,8 +355,8 @@ const data: {
             companyName: "Автостиль",
             comment: "",
             carrierFullName: "Демьянова Дарья Владиславовна",
-            carrierPhoneNumber: "+73256108",
-            ATICode: 20201,
+            carrierPhoneNumber: "+7752195211",
+            atiCode: 20201,
         },
         {
             id: 17,
@@ -364,8 +364,8 @@ const data: {
             companyName: "Физика вождения",
             comment: "",
             carrierFullName: "Михайлов Давид Максимович",
-            carrierPhoneNumber: "+72845053",
-            ATICode: 70785,
+            carrierPhoneNumber: "+7755004127",
+            atiCode: 70785,
         },
         {
             id: 18,
@@ -373,8 +373,8 @@ const data: {
             companyName: "Формула-1",
             comment: "",
             carrierFullName: "Гаврилов Егор Ильич",
-            carrierPhoneNumber: "+79853221",
-            ATICode: 12622,
+            carrierPhoneNumber: "+7919581970",
+            atiCode: 12622,
         },
         {
             id: 19,
@@ -382,8 +382,8 @@ const data: {
             companyName: "Светофор",
             comment: "",
             carrierFullName: "Боброва Алиса Максимовна",
-            carrierPhoneNumber: "+75572311",
-            ATICode: 74081,
+            carrierPhoneNumber: "+7945953646",
+            atiCode: 74081,
         },
         {
             id: 20,
@@ -391,8 +391,8 @@ const data: {
             companyName: "Фаркоп",
             comment: "",
             carrierFullName: "Иванова Алёна Арсентьевна",
-            carrierPhoneNumber: "+78538169",
-            ATICode: 84790,
+            carrierPhoneNumber: "+7962691517",
+            atiCode: 84790,
         },
         {
             id: 21,
@@ -400,27 +400,29 @@ const data: {
             companyName: "АвтоГарвард",
             comment: "",
             carrierFullName: "Кузьмин Константин Александрович",
-            carrierPhoneNumber: "+71766269",
-            ATICode: 22299,
+            carrierPhoneNumber: "+7967647615",
+            atiCode: 22299,
         }
     ]
-};
+};*/
 
 
-type AppState = {
-    adminMode: boolean;
-};
+
 
 export const AdminModeContext = React.createContext({
     adminMode: false,
     toggleMode: () => {
     }
+
 });
 
+type AppState = {
+    adminMode: boolean;
+};
 
 export class App extends React.Component<{}, AppState> {
     readonly state: AppState = {
-        adminMode: false,
+        adminMode: true,
     };
 
     toggleMode = () => {
@@ -428,13 +430,12 @@ export class App extends React.Component<{}, AppState> {
         console.log(this.state.adminMode)
     };
 
-
     render() {
         return (
             <AdminModeContext.Provider value={{adminMode: this.state.adminMode, toggleMode: () => this.toggleMode()}}>
                 <div className="App">
                     <Header/>
-                    <MainTable applications={data.applications}/>
+                    <Main/>
                 </div>
             </AdminModeContext.Provider>
         );
