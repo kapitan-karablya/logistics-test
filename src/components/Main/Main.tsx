@@ -236,9 +236,10 @@ export default class Main extends React.Component<MainTableProps, MainTableState
                 value = localStorage.getItem(key);
             }
             if (value) {
+                let index: number = Number(key);
                 value = JSON.parse(value);
                 value.date = new Date(value.date);
-                list.push(value);
+                list[index] = value;
             }
         }
         console.log(list);
