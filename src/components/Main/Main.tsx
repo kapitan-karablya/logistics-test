@@ -342,17 +342,18 @@ export default class Main extends React.Component<MainTableProps, MainTableState
                         {({adminMode}) => (
                             <div className={style.tableButtons}>
                                 <button className={classNames(style.tableButton, style.testDataButton)}
-                                        onClick={()=>this.addTestData()}>Заполнить тестовыми данными</button>
+                                        onClick={() => this.addTestData()}>Заполнить тестовыми данными
+                                </button>
                                 <div className={style.tableEditButtons}>
-                                <button className={style.tableButton} onClick={this.handleAddApplication}
-                                        disabled={!adminMode}>Добавить
-                                </button>
-                                <button className={style.tableButton} onClick={this.handleChangeApplication}
-                                        disabled={!adminMode || this.state.currentApplication.id === 0}>Изменить
-                                </button>
-                                <button className={style.tableButton} onClick={this.handleDeleteApplication}
-                                        disabled={!adminMode || this.state.currentApplication.id === 0}>Удалить
-                                </button>
+                                    <button className={style.tableButton} onClick={this.handleAddApplication}
+                                            disabled={!adminMode}>Добавить
+                                    </button>
+                                    <button className={style.tableButton} onClick={this.handleChangeApplication}
+                                            disabled={!adminMode || this.state.currentApplication.id === 0}>Изменить
+                                    </button>
+                                    <button className={style.tableButton} onClick={this.handleDeleteApplication}
+                                            disabled={!adminMode || this.state.currentApplication.id === 0}>Удалить
+                                    </button>
                                 </div>
                             </div>
                         )}
@@ -367,8 +368,8 @@ export default class Main extends React.Component<MainTableProps, MainTableState
                                     <th>Фирма клиента</th>
                                     <th>ФИО перевозчика</th>
                                     <th>Телефен перевозчика</th>
-                                    <th>Комментарий</th>
                                     <th>ATI перевозчика</th>
+                                    <th>Комментарий</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -378,12 +379,15 @@ export default class Main extends React.Component<MainTableProps, MainTableState
                                         onClick={(e) => this.handleSelectApplication(item, e)}>
                                         <td>{item.id}</td>
                                         <td>{item.date.toLocaleDateString()} {item.date.toLocaleTimeString()}</td>
-                                        <td>{item.companyName}</td>
-                                        <td>{item.carrierFullName}</td>
-                                        <td>{item.carrierPhoneNumber}</td>
-                                        <td>{item.comment === "" ? "Отсутствует" : item.comment}</td>
-                                        <td><a href={`https://ati.su/firms/${item.atiCode}/info`}>{item.atiCode}</a>
+                                        <td>{item.companyName === "" ? "Не указана" : item.companyName}</td>
+                                        <td>{item.carrierFullName === "" ? "Не указано" : item.carrierFullName}</td>
+                                        <td>{item.carrierPhoneNumber === "" ? "Не указан" : item.carrierPhoneNumber}</td>
+                                        <td>
+                                            {item.atiCode === 0 ? "—" :
+                                                <a href={`https://ati.su/firms/${item.atiCode}/info`}>{item.atiCode}</a>
+                                            }
                                         </td>
+                                        <td>{item.comment === "" ? "Отсутствует" : item.comment}</td>
                                     </tr>
                                 ))}
                                 </tbody>
