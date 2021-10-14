@@ -218,7 +218,7 @@ const data: {
             id: 1,
             date: new Date("2021-09-14 13:12:46"),
             companyName: "АвтоАс",
-            comment:  "",
+            comment: "",
             carrierFullName: "Нестеров Макар Маркович",
             carrierPhoneNumber: "+78127897",
             ATICode: 60638,
@@ -227,7 +227,7 @@ const data: {
             id: 2,
             date: new Date("2021-09-17 23:39:52"),
             companyName: "Прайм-Авто",
-            comment:  "",
+            comment: "",
             carrierFullName: "Кузнецов Даниил Вячеславович",
             carrierPhoneNumber: "+74373865",
             ATICode: 70531,
@@ -236,7 +236,7 @@ const data: {
             id: 3,
             date: new Date("2021-09-23 22:03:29"),
             companyName: "ГрузАвтоэлита",
-            comment:  "",
+            comment: "",
             carrierFullName: "Антонов Савелий Матвеевич",
             carrierPhoneNumber: "+77737352",
             ATICode: 88271,
@@ -245,7 +245,7 @@ const data: {
             id: 4,
             date: new Date("2021-09-29 18:28:39"),
             companyName: "Автополис",
-            comment:  "",
+            comment: "",
             carrierFullName: "Золотова Виктория Мироновна",
             carrierPhoneNumber: "+72568949",
             ATICode: 34161,
@@ -254,7 +254,7 @@ const data: {
             id: 5,
             date: new Date("2021-10-07 22:32:34"),
             companyName: "Автолидер",
-            comment:  "",
+            comment: "",
             carrierFullName: "Шульгин Владимир Ярославович",
             carrierPhoneNumber: "+76153106",
             ATICode: 35171,
@@ -263,7 +263,7 @@ const data: {
             id: 6,
             date: new Date("2021-09-20 09:31:46"),
             companyName: "Кабриолет",
-            comment:  "",
+            comment: "",
             carrierFullName: "Парамонов Григорий Владиславович",
             carrierPhoneNumber: "+73404895",
             ATICode: 11040,
@@ -272,7 +272,7 @@ const data: {
             id: 7,
             date: new Date("2021-09-24 01:16:28"),
             companyName: "Орлан",
-            comment:  "",
+            comment: "",
             carrierFullName: "Суслов Филипп Максимович",
             carrierPhoneNumber: "+77375910",
             ATICode: 47210,
@@ -281,7 +281,7 @@ const data: {
             id: 8,
             date: new Date("2021-09-29 06:06:49"),
             companyName: "Стрела",
-            comment:  "",
+            comment: "",
             carrierFullName: "Орлова Милана Михайловна",
             carrierPhoneNumber: "+79026651",
             ATICode: 14737,
@@ -290,7 +290,7 @@ const data: {
             id: 9,
             date: new Date("2021-09-15 21:00:13"),
             companyName: "Новые горизонты",
-            comment:  "",
+            comment: "",
             carrierFullName: "Филатова Анна Глебовна",
             carrierPhoneNumber: "+78860510",
             ATICode: 92471,
@@ -299,7 +299,7 @@ const data: {
             id: 10,
             date: new Date("2021-10-05 16:16:40"),
             companyName: "Бэст",
-            comment:  "",
+            comment: "",
             carrierFullName: "Захаров Александр Эмильевич",
             carrierPhoneNumber: "+74538388",
             ATICode: 78493,
@@ -308,7 +308,7 @@ const data: {
             id: 11,
             date: new Date("2021-09-12 06:08:17"),
             companyName: "Сириус",
-            comment:  "",
+            comment: "",
             carrierFullName: "Сергеев Алексей Арсентьевич",
             carrierPhoneNumber: "+72565396",
             ATICode: 28943,
@@ -317,7 +317,7 @@ const data: {
             id: 12,
             date: new Date("2021-09-08 05:31:03"),
             companyName: "Фордевинд",
-            comment:  "",
+            comment: "",
             carrierFullName: "Фролова Александра Павловна",
             carrierPhoneNumber: "+72145662",
             ATICode: 10149,
@@ -326,7 +326,7 @@ const data: {
             id: 13,
             date: new Date("2021-09-05 10:08:28"),
             companyName: "Макси",
-            comment:  "",
+            comment: "",
             carrierFullName: "Лебедев Алексей Савельевич",
             carrierPhoneNumber: "+78783449",
             ATICode: 11142,
@@ -335,7 +335,7 @@ const data: {
             id: 14,
             date: new Date("2021-09-22 18:21:56"),
             companyName: "Зеленый свет",
-            comment:  "",
+            comment: "",
             carrierFullName: "Осипов Денис Тимофеевич",
             carrierPhoneNumber: "+74092437",
             ATICode: 48185,
@@ -344,7 +344,7 @@ const data: {
             id: 15,
             date: new Date("2021-09-14 18:30:43"),
             companyName: "Юность",
-            comment:  "",
+            comment: "",
             carrierFullName: "Мартынов Игорь Павлович",
             carrierPhoneNumber: "+72235269",
             ATICode: 94704,
@@ -353,7 +353,7 @@ const data: {
             id: 16,
             date: new Date("2021-09-09 12:12:01"),
             companyName: "Автостиль",
-            comment:  "",
+            comment: "",
             carrierFullName: "Демьянова Дарья Владиславовна",
             carrierPhoneNumber: "+73256108",
             ATICode: 20201,
@@ -362,7 +362,7 @@ const data: {
             id: 17,
             date: new Date("2021-10-07 15:50:49"),
             companyName: "Физика вождения",
-            comment:  "",
+            comment: "",
             carrierFullName: "Михайлов Давид Максимович",
             carrierPhoneNumber: "+72845053",
             ATICode: 70785,
@@ -371,7 +371,7 @@ const data: {
             id: 18,
             date: new Date("2021-09-12 00:43:02"),
             companyName: "Формула-1",
-            comment:  "",
+            comment: "",
             carrierFullName: "Гаврилов Егор Ильич",
             carrierPhoneNumber: "+79853221",
             ATICode: 12622,
@@ -380,7 +380,7 @@ const data: {
             id: 19,
             date: new Date("2021-09-16 14:07:37"),
             companyName: "Светофор",
-            comment:  "",
+            comment: "",
             carrierFullName: "Боброва Алиса Максимовна",
             carrierPhoneNumber: "+75572311",
             ATICode: 74081,
@@ -389,7 +389,7 @@ const data: {
             id: 20,
             date: new Date("2021-10-02 12:06:13"),
             companyName: "Фаркоп",
-            comment:  "",
+            comment: "",
             carrierFullName: "Иванова Алёна Арсентьевна",
             carrierPhoneNumber: "+78538169",
             ATICode: 84790,
@@ -398,7 +398,7 @@ const data: {
             id: 21,
             date: new Date("2021-09-16 16:49:25"),
             companyName: "АвтоГарвард",
-            comment:  "",
+            comment: "",
             carrierFullName: "Кузьмин Константин Александрович",
             carrierPhoneNumber: "+71766269",
             ATICode: 22299,
@@ -407,13 +407,38 @@ const data: {
 };
 
 
-function App() {
-    return (
-        <div className="App">
-            <Header/>
-            <MainTable applications={data.applications}/>
-        </div>
-    );
+type AppState = {
+    adminMode: boolean;
+};
+
+export const AdminModeContext = React.createContext({
+    adminMode: false,
+    toggleMode: () => {
+    }
+});
+
+
+export class App extends React.Component<{}, AppState> {
+    readonly state: AppState = {
+        adminMode: false,
+    };
+
+    toggleMode = () => {
+        this.setState({adminMode: !this.state.adminMode});
+        console.log(this.state.adminMode)
+    };
+
+
+    render() {
+        return (
+            <AdminModeContext.Provider value={{adminMode: this.state.adminMode, toggleMode: () => this.toggleMode()}}>
+                <div className="App">
+                    <Header/>
+                    <MainTable applications={data.applications}/>
+                </div>
+            </AdminModeContext.Provider>
+        );
+    }
 }
 
 export default App;
