@@ -1,46 +1,162 @@
-# Getting Started with Create React App
+# Документация к REST API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Список запросов
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###  applications: действия с заявками на грузоперевозки </br><br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+`GET /applications` - получить список всех заявок.
+<details>
+<summary>Подробности</summary>
+<h4>Параметры</h4>
+<p>Нет параметров</p>
+<h4>Ответы</h4>
+<ul>
+<li>
+Код: 200 (successful operation)
+<p>Пример полученного значения:</p>
+          
+```
+  [{
+    id: 7,
+    date: "2021-10-05T11:16:40.000Z",  
+    companyName: "Орлан",  
+    comment: "",
+    carrierFullName: "Суслов Филипп Максимович",
+    carrierPhoneNumber: "+7305740259",
+    atiCode: 47210,
+  }]
+```
+</li>
+</ul>
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+***
+`GET /applications/{applicationId}` - получить заявку по ее номеру.
+<details>
+<summary>Подробности</summary>
+<h4>Параметры</h4>
+<p><b>Id</b> (path): number</p>
+<h4>Ответы</h4>
+<ul>
+<li>
+Код: 200 (successful operation)
+<p>Пример полученного значения:</p>
 
-### `npm run build`
+```
+ {
+    id: 7,
+    date: "2021-10-05T11:16:40.000Z",  
+    companyName: "Орлан",  
+    comment: "",
+    carrierFullName: "Суслов Филипп Максимович",
+    carrierPhoneNumber: "+7305740259",
+    atiCode: 47210,
+  }
+  ```
+</li>
+<li>
+Код: 400 (Invalid ID supplied)
+</li>
+<li>
+Код: 404 (Application not found)
+</li>
+</ul>
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+***
+`PUT /applications/{applicationId}` -  изменить существующую заявку.
+<details>
+<summary>Подробности</summary>
+<h4>Параметры</h4>
+<p><b>Id</b> (path): number</p>
+<p><b>body</b>: object</p>
+Пример: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+ {
+    id: 7,
+    date: "2021-10-05T11:16:40.000Z",  
+    companyName: "Орлан",  
+    comment: "",
+    carrierFullName: "Суслов Филипп Максимович",
+    carrierPhoneNumber: "+7305740259",
+    atiCode: 47210,
+  }
+  ```
+<h4>Ответы</h4>
+<ul>
+<li>
+Код: 200 (successful operation)
+</li>
+<li>
+Код: 400 (Invalid ID supplied)
+</li>
+<li>
+Код: 404 (Application not found)
+</li>
+</ul>
+</details>
+   
+***
+`POST /applications` - создать новую заявку.
+<details>
+<summary>Подробности</summary>
+<h4>Параметры</h4>
+<p><b>body</b>: object</p>
+Пример: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+ {
+    date: "2021-10-05T11:16:40.000Z",  
+    companyName: "Орлан",  
+    comment: "",
+    carrierFullName: "Суслов Филипп Максимович",
+    carrierPhoneNumber: "+7305740259",
+    atiCode: 47210,
+  }
+```
+<h4>Ответы</h4>
+<ul>
+<li>
+Код: 201 (successful operation)
+</li>
+</ul>
+</details>
 
-### `npm run eject`
+***
+`DELETE /applications/{applicationId}` - удалить заявку.
+<details>
+<summary>Подробности</summary>
+<h4>Параметры</h4>
+<p><b>Id</b> (path): number</p>
+<h4>Ответы</h4>
+<ul>
+<li>
+Код: 200 (successful operation)
+</li>
+<li>
+Код: 400 (Invalid ID supplied)
+</li>
+<li>
+Код: 404 (Application not found)
+</li>
+</ul>
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### user: операции с пользователем <br/><br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`POST /user` - создать пользователя
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`PUT /user/{userName}` - изменить пользователя по его логину
 
-## Learn More
+`DELETE /user/{userName}` - удалить пользователя по его логину
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`GET /user/login` - аунтентификация пользователя в системе
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`GET /user/logout` - завершение текущего сеанса пользователя в системе
+
